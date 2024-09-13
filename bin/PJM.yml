@@ -1,0 +1,45 @@
+#run部分使用说明，
+#  PS：不管{}内是否有内容，目前都必须加上！否则无法检测！;同样如此！
+#  组件：
+#    发送标题 sendTitle{maintitle=主标题;subtitle=副标题;stay=停留时间/tick;fadeOut=淡出时间/tick;fadeIn=淡入时间/tick;} #支持%player%变量
+#    发送消息 sendMessage{content=内容;} #支持%player%变量
+#    播放音效 playSound{effect=音效;}
+#  延迟效果 delay{time=时间/ms;}
+#  闪电效果 lightning{} 支持offx,offy,offz来更换相对玩家位置
+#  释放烟花 firework{} 支持offx,offy,offz来更换相对玩家位置
+#  制造爆炸 explode{} 支持offx,offy,offz来更换相对玩家位置
+#  粒子效果 particle{effect=粒子效果英文名;speed=粒子速度;count=粒子数量;allsee=是否全服可见(true/false)} #支持offx,offy,offz来更换相对玩家位置
+    
+Settings: #注意，越上面代表优先级越高
+  SVIP: #组名 
+    perm: "CowSuperJoin.SVIP"
+    run: #运行内容 格式 属性=xxx; PS: ;为必须！
+    - "sendTitle{maintitle=&a%player%;subtitle=&e欢&f___;stay=40;fadeOut=10;fadeIn=10;}"
+    - "sendMessage{content=&e&m&l-------------------------;}"
+    - "sendMessage{content=&e&m&l;}"
+    - "sendMessage{content=&f欢迎尊贵的&cSVIP &a%player% &f进入服务器！;}"
+    - "sendMessage{content=&e&m&l;}"
+    - "sendMessage{content=&e&m&l-------------------------;}"
+    - "lightning{}"
+    - "delay{time=1000;}"
+    - "playSound{effect=ENTITY_ENDERDRAGON_HURT;}"
+    - "firework{}"
+    - "sendTitle{maintitle=&a%player%;subtitle=&e欢迎&f__;stay=40;fadeOut=10;fadeIn=10;}"
+    - "delay{time=1000;}"
+    - "firework{}"
+    - "playSound{effect=ENTITY_ENDERDRAGON_HURT;}"
+    - "sendTitle{maintitle=&a%player%;subtitle=&e欢迎加&f_;stay=40;fadeOut=10;fadeIn=10;}"
+    - "delay{time=1000;}"
+    - "playSound{effect=ENTITY_ENDERDRAGON_HURT;}"
+    - "sendTitle{maintitle=&a%player%;subtitle=&e欢迎加入;stay=40;fadeOut=10;fadeIn=10;}"
+    - "delay{time=1000;}"
+    - "particle{effect=flame;count=3;offy=1;offx=2;}"
+    - "particle{effect=flame;count=3;offy=1;offx=-2;}"
+    - "particle{effect=flame;count=3;offy=1;offz=2;}"
+    - "particle{effect=flame;count=3;offy=1;offz=-2;}"
+    - "particle{effect=flame;count=3;offy=0;offz=1;offx=1;}"
+    - "particle{effect=flame;count=3;offy=0;offz=-1;offx=1;}"
+    - "particle{effect=flame;count=3;offy=0;offz=1;offx=-1;}"
+    - "particle{effect=flame;count=3;offy=0;offz=-1;offx=-1;}"
+    - "playSound{effect=ENTITY_ENDERDRAGON_HURT;}"
+    - "explode{offy=3.5;}"

@@ -1,0 +1,8 @@
+Settings:
+  HelpMessage:
+  - "&7<&fCowSuperJoin-Reloaded&7>"
+  - "&f"
+  - "  &f-reload 重载插件"
+  - "&f"
+  PermissionJoinMessage: #权限进入消息，位置，PJM.yml
+    enable: true  #是否启用
